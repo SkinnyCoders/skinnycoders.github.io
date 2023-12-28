@@ -1,5 +1,5 @@
 // function([string1, string2],target id,[color1,color2])    
-consoleText(['Hello World.', 'I am a backend engineers.','Plays Harder.','Works Smarter.'], 'text',['#eee','#eee','#eee']);
+consoleText(['Hello World.', 'a Backend Engineers.','Tech Enthusias','Plays Harder.','Works Smarter.'], 'text',['#eee','#eee','#eee']);
 
 function consoleText(words, id, colors) {
   if (colors === undefined) colors = ['#eee'];
@@ -24,14 +24,14 @@ function consoleText(words, id, colors) {
         target.setAttribute('style', 'color:' + colors[0])
         letterCount += x;
         waiting = false;
-      }, 1500)
+      }, 1000)
     } else if (letterCount === words[0].length + 1 && waiting === false) {
       waiting = true;
       window.setTimeout(function() {
         x = -1;
         letterCount += x;
         waiting = false;
-      }, 1500)
+      }, 1000)
     } else if (waiting === false) {
       target.innerHTML = words[0].substring(0, letterCount)
       letterCount += x;
